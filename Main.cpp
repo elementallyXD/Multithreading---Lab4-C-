@@ -1,12 +1,27 @@
 #include <iostream>
+#include "Queue.h"
 
 using namespace std;
 
 int main()
 {
-	int b;
+	int info;
 
-	cout << "HELLOO";
-	cin >> b;
+	Queue *MyQueue = new Queue;
+	CreateQueue(MyQueue);
+
+	cout << "Inpute the number: ";
+	cin >> info;
+
+	Push(info, MyQueue);
+	cout << "Queue :\n";
+	Print (MyQueue);
+	Pop(MyQueue);
+	Print (MyQueue);
+
+	ClearQueue(MyQueue);
+	delete MyQueue->Head;
+	delete MyQueue;
+
 	return 0;
 }
