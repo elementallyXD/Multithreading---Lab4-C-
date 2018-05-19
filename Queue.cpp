@@ -8,12 +8,19 @@ void CreateQueue(Queue *MyQueue)
     MyQueue->Tail = NULL;
 }
 
-void Push(int x,Queue *&MyQueue)
+bool EmptyQueue(const Queue *MyQueue)
+{
+	return (MyQueue->Head == NULL);
+}
+
+void Push(int x,Queue *&MyQueue, ofstream &f)
 {
 
     Queue *element = new Queue;
     element->x = x;
     element->Next = NULL;
+    f << "Added new element in queue with value = " << x << endl;
+
     if (MyQueue->Head == NULL)
         MyQueue->Head = MyQueue->Tail = element;
     else
@@ -23,12 +30,16 @@ void Push(int x,Queue *&MyQueue)
     }
 }
 
-void Pop(Queue *MyQueue)
+void Pop(Queue *MyQueue, std::ofstream &f)
 {
-    if (MyQueue->Head != NULL)
+	 if (EmptyQueue(MyQueue))
+		   return;
+
+	if (MyQueue->Head != NULL)
     {
         Queue *temp = MyQueue->Head->Next;
         MyQueue->Head = temp;
+        f << "Deleted element from queue" << endl;
     }
 }
 
@@ -42,12 +53,7 @@ void ClearQueue(Queue *MyQueue)
     }
 }
 
-bool EmptyQueue(const Queue *MyQueue)
-{
-	return (MyQueue->Head == NULL);
-}
-
-void Print(const Queue *MyQueue)
+void Print(const Queue *MyQueue, ofstream &f)
 {
    if (EmptyQueue(MyQueue))
 	   return;
@@ -56,9 +62,11 @@ void Print(const Queue *MyQueue)
 
    for (; element; element = element->Next)
    {
-      cout << element->x;
+     //cout << element->x;
+      f << element->x;
    }
-   cout << endl;
+   // cout << endl;
+   f << endl;
 }
 
 
