@@ -1,5 +1,10 @@
 #include <pthread.h>
 #include <semaphore.h>
+#include "Queue.h"
 
-sem_t SCR21, SCR22;
-pthread_mutex_t MCR1 = PTHREAD_MUTEX_INITIALIZER;
+void *tread1 (void *unused);
+void *tread2 (void *unused);
+void *tread3 (void *unused);
+void *tread4 (void *unused);
+void *tread5 (void *unused);
+void *tread6 (void *unused);
