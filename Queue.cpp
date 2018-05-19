@@ -8,7 +8,7 @@ void CreateQueue(Queue *MyQueue)
     MyQueue->Tail = NULL;
 }
 
-bool EmptyQueue(const Queue *MyQueue)
+bool EmptyQueue(Queue *MyQueue)
 {
 	return (MyQueue->Head == NULL);
 }
@@ -30,17 +30,19 @@ void Push(int x,Queue *&MyQueue, ofstream &f)
     }
 }
 
-void Pop(Queue *MyQueue, std::ofstream &f)
+int Pop(Queue *MyQueue, std::ofstream &f)
 {
-	 if (EmptyQueue(MyQueue))
-		   return;
+	int p;
 
 	if (MyQueue->Head != NULL)
     {
         Queue *temp = MyQueue->Head->Next;
+        p = MyQueue->Head->x;
         MyQueue->Head = temp;
-        f << "Deleted element from queue" << endl;
+        f << "Geted element from head" << endl;
     }
+
+	return p;
 }
 
 void ClearQueue(Queue *MyQueue)
@@ -53,7 +55,7 @@ void ClearQueue(Queue *MyQueue)
     }
 }
 
-void Print(const Queue *MyQueue, ofstream &f)
+void Print(Queue *MyQueue, ofstream &f)
 {
    if (EmptyQueue(MyQueue))
 	   return;
@@ -67,6 +69,11 @@ void Print(const Queue *MyQueue, ofstream &f)
    }
    // cout << endl;
    f << endl;
+}
+
+void Action(void* Pop)
+{
+	cout << "Does actions for elem! \n";
 }
 
 
