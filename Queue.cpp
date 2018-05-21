@@ -13,13 +13,13 @@ bool EmptyQueue(Queue *MyQueue)
 	return (MyQueue->Head == NULL);
 }
 
-void Push(int x,Queue *&MyQueue, ofstream &f)
+int Push(int x,Queue *&MyQueue)
 {
 
     Queue *element = new Queue;
     element->x = x;
     element->Next = NULL;
-    f << "Added new element in queue with value = " << x << endl;
+   //f << "Added new element in queue with value = " << x << endl;
 
     if (MyQueue->Head == NULL)
         MyQueue->Head = MyQueue->Tail = element;
@@ -28,9 +28,10 @@ void Push(int x,Queue *&MyQueue, ofstream &f)
         (MyQueue->Tail)->Next = element;
         MyQueue->Tail = element;
     }
+    return element->x;
 }
 
-int Pop(Queue *MyQueue, std::ofstream &f)
+int Pop(Queue *MyQueue)
 {
 	int p;
 
@@ -39,7 +40,7 @@ int Pop(Queue *MyQueue, std::ofstream &f)
         Queue *temp = MyQueue->Head->Next;
         p = MyQueue->Head->x;
         MyQueue->Head = temp;
-        f << "Geted element from head" << endl;
+       // f << "Geted element from head" << endl;
     }
 
 	return p;
@@ -71,9 +72,10 @@ void Print(Queue *MyQueue, ofstream &f)
    f << endl;
 }
 
-void Action(void* Pop)
+int Action(int Pop)
 {
-	cout << "Does actions for elem! \n";
+	//cout << "Does actions for elem! \n";
+	return Pop;
 }
 
 

@@ -8,9 +8,9 @@ struct Queue
 };
 
 void CreateQueue(Queue *MyQueue);
-void Push(int x,Queue *&MyQueue, std::ofstream &f);
-int  Pop(Queue *MyQueue, std::ofstream &f);
+int Push(int x,Queue *&MyQueue);
+int  Pop(Queue *MyQueue);
 void ClearQueue(Queue *MyQueue);
 void Print(Queue *MyQueue, std::ofstream &f);
-void Action(int Pop);
+int Action(int Pop);
 bool EmptyQueue(Queue *MyQueue);

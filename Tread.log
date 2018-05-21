@@ -1,6 +1,17 @@
 Created Queue
-Added new element in queue with value = 442
-Added new element in queue with value = 442
-Added new element in queue with value = 442
-Deleted element from queue
+Added first element =0
+Added first element =1
+T4 mutex lock
+Producer thread 4:push element = 3 Created; current queue length = 3
+T4 mutex unlock
+Consumer thread 1: pop element = 0 ; current queue length = 2
+T1 mutex unlock
+T4 mutex lock
+Producer thread 4:push element = 3 Created; current queue length = 3
+T4 mutex unlock
+Producer thread_4  stopped !!!
+T1 mutex lock
+Consumer thread 1: pop element = 1 ; current queue length = 2
+T1 mutex unlock
+Producer thread_1  stopped !!!
 Queue Deleted
