@@ -26,7 +26,7 @@ Queue *MyQueue = new Queue;
 
 
 /* Дві спільні змінні, що контролюють довжину черги, що використовується в якості буфера */
-int max_queue_length = 20; /* максимально допустима довжина черги */
+int max_queue_length = 10; /* максимально допустима довжина черги */
 int curr_queue_length =  0; /* поточна довжина черги */
 
 /* Дві сигнальні (умовні) змінні для сигналізування про непорожність та неповноту черги */
@@ -105,28 +105,32 @@ int is_empty()
 //int flag = -1;
 void *tread1 (void *unused){
 	while (1) {
+		pthread_mutex_lock(&MCR1);
 	    if (EmptyQueue(MyQueue) || is_empty())	pthread_cond_wait (&Sig1, &MCR1);
+	    pthread_mutex_unlock(&MCR1);
+
 	    	if (sem_post(&SCR21)) { printf("(tread 1)sem_post: failed: %s\n", strerror(errno)); }
+
 	    	int value;
 	    	sem_getvalue(&SCR21, &value);
 	    	printf ("The value of the semaphor is %d\n", value);
 
-	    	fout << "T1 mutex lock\n";
 	    	pthread_mutex_lock (&MCR1);
 
 			curr_queue_length--;
 			fout << "Consumer thread 1: pop element = " << Action(Pop(MyQueue)) <<  " ; current queue length = " << curr_queue_length << endl;
 
-			fout << "T1 mutex unlock\n";
 			pthread_mutex_unlock (&MCR1);
 			pthread_cond_broadcast(&Sig2);
 
+			usleep(10000);
 			if(_of_buffer){
 				 printf("Signal 1 to died\n");
 				 break;
 			}
 	}
-        fout << "Producer thread_1  stopped !!!" << endl;
+		pthread_join (p4, NULL);
+		fout << "Producer thread_1  stopped !!!" << endl;
 	    return NULL;
 }
 
@@ -150,7 +154,9 @@ void *tread4 (void *unused){
 int count = 0;
 	while (1)
 		{
+					pthread_mutex_lock(&MCR1);
 				    if (is_full()) pthread_cond_wait (&Sig2, &MCR1);
+				    pthread_mutex_unlock(&MCR1);
 
 
 						int value;
@@ -158,25 +164,26 @@ int count = 0;
 						printf ("The value of the semaphor is %d\n", value);
 
 						//if (value >= 1)
-				    	if (sem_trywait(&SCR21)){printf("sem_trywait: failed: %s\n", strerror(errno));}
+				    	if (sem_wait(&SCR21)){printf("sem_wait: failed: %s\n", strerror(errno));}
 				    	else
 						{
 							pthread_mutex_lock (&MCR1);
 							fout << "T4 mutex lock\n";
 							count++;
 							curr_queue_length++;
-							fout <<"Producer thread 4:push element = " << Push(curr_queue_length,MyQueue) <<" Created; current queue length = " << curr_queue_length << endl;
+							fout <<"Producer thread 4:push element = " << Push(curr_queue_length,MyQueue) << " Created; current queue length = " << curr_queue_length << endl;
 
-							//if (is_full())   number_of_full++;
-							//if (number_of_full >= 2) break;
+							if (is_full())   number_of_full++;
+							if (number_of_full >= 2) break;
 
 							fout << "T4 mutex unlock\n";
 							pthread_mutex_unlock (&MCR1);
 							pthread_cond_broadcast(&Sig1);
 						}
-				    if (count == 2) break;
+				  //  if (count == 5) break;
 		}
 			        _of_buffer = 1;
+			       // pthread_cancle(tread5);
 
 				fout << ("Producer thread_4  stopped !!!\n");
 				return NULL;
@@ -186,19 +193,23 @@ void *tread5 (void *unused){
 int value;
 	while (1)
 		{
+		pthread_mutex_lock(&MCR1);
 		if (EmptyQueue(MyQueue) || is_empty())
 			    	pthread_cond_wait (&Sig1, &MCR1);
-		else{
+		pthread_mutex_unlock(&MCR1);
+
+		//else{
 			    pthread_mutex_lock (&MCR1);
 				curr_queue_length--;
 				fout << "Consumer thread 5: pop element = " << Action(Pop(MyQueue)) <<  " ; current queue length = " << curr_queue_length << endl;
 				pthread_mutex_unlock (&MCR1);
 				pthread_cond_broadcast(&Sig2);
-				//sem_trywait(&SCR21);
+				sem_wait(&SCR21);
 				sem_getvalue(&SCR21, &value);
 				printf ("The value of the semaphor is %d\n", value);
 				if(_of_buffer) break;
-			}
+				usleep(10000);
+			//}
 		}
 		        fout << "Producer thread_5  stopped !!!" << endl;
 			    return NULL;
@@ -232,8 +243,9 @@ int main()
    pthread_create (&p4, NULL, &tread4, NULL);
    //pthread_create (&p5, NULL, &tread5, NULL);
 
-   pthread_join (p1, NULL);
    pthread_join (p4, NULL);
+   pthread_join (p1, NULL);
+
   // pthread_join (p5, NULL);
 
 	ClearQueue(MyQueue);

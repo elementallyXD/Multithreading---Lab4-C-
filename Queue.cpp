@@ -19,7 +19,6 @@ int Push(int x,Queue *&MyQueue)
     Queue *element = new Queue;
     element->x = x;
     element->Next = NULL;
-   //f << "Added new element in queue with value = " << x << endl;
 
     if (MyQueue->Head == NULL)
         MyQueue->Head = MyQueue->Tail = element;
