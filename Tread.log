@@ -1,17 +1,49 @@
-Created Queue
+Program begin
 Added first element =0
 Added first element =1
-T4 mutex lock
-Producer thread 4:push element = 3 Created; current queue length = 3
-T4 mutex unlock
-Consumer thread 1: pop element = 0 ; current queue length = 2
-T1 mutex unlock
-T4 mutex lock
-Producer thread 4:push element = 3 Created; current queue length = 3
-T4 mutex unlock
-Producer thread_4  stopped !!!
-T1 mutex lock
-Consumer thread 1: pop element = 1 ; current queue length = 2
-T1 mutex unlock
-Producer thread_1  stopped !!!
-Queue Deleted
+P1 mutex lock
+Consumer thread 1: Pop element = 0 ; current queue length = 1 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 1 ; current queue length = 0 length
+P1 mutex unlock
+P1 mutex lock
+P3 mutex lock
+P3 modef CR2
+P3 modef CR2
+P3 mutex unlock
+P3 mutex lock
+P3 modef CR2
+P3 modef CR2
+P3 mutex unlock
+P3 mutex lock
+P3 modef CR2
+P3 modef CR2
+P3 mutex unlock
+P3 mutex lock
+P3 modef CR2
+P3 modef CR2
+P3 mutex unlock
+P3 mutex lock
+P3 modef CR2
+P3 modef CR2
+P3 mutex unlock
+P2 mutex lock
+Producer thread 2: Push element = 0 Created; current queue length = 1
+P2 use CR2
+10 11 2 3 4 -1 6 7
+P2 modef CR2
+P4 mutex unlock
+Consumer thread 1: Pop element = 0 ; current queue length = 0 length
+P1 CR1 Empty two times!
+P1 mutex unlock
+Consumer thread_1  stopped and cancel other !!!! 
+P4 mutex lock
+Producer thread 4: Push element = 0 Created; current queue length = 1
+P4 mutex unlock
+Producer thread_4  stopped and cancel other !!!! 
+P3 mutex lock
+P3 modef CR2
+P3 modef CR2
+
+End program!
