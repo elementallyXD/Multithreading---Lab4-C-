@@ -21,7 +21,7 @@ ofstream fout("Tread.log");
 
 
 /* Дві спільні змінні, що контролюють довжину черги, що використовується в якості буфера */
-int max_queue_length = 10; /* максимально допустима довжина черги */
+int max_queue_length = 5; /* максимально допустима довжина черги */
 int curr_queue_length =  0; /* поточна довжина черги */
 
 /* Дві сигнальні (умовні) змінні для сигналізування про непорожність та неповноту черги */
@@ -31,6 +31,8 @@ pthread_cond_t  	Sig2  = PTHREAD_COND_INITIALIZER; //not full (for producer)
 /*Signal veriables from scheme */
 pthread_cond_t		Sig21 = PTHREAD_COND_INITIALIZER;
 pthread_cond_t		Sig22 = PTHREAD_COND_INITIALIZER;
+
+
 
 /*   Semaphores  */
 sem_t SCR21;
@@ -135,20 +137,22 @@ bool cond = true;
 void *tread1 (void *unused){
 	int value;
 
-	//int _count = 0;
-	while (cond)
+	while (1)
 	{
 		pthread_mutex_lock(&MCR1);
-		fout << "P1 mutex lock\n";
+		//fout << "P1 mutex lock\n";
 
 			sem_getvalue(&SCR21, &value);
-			if (value == 0) sem_post(&SCR21);
+			if (value == 0) {
+				sem_post(&SCR21);
+				fout << "P1 open Semaphor\n";
+			}
 			sem_getvalue(&SCR21, &value);
 			cout << "P1 The value of the semaphor is " << value << "\n";
 
 			if (is_empty())	{
 				   pthread_cond_wait (&Sig1, &MCR1);
-				   printf ("P1 Waiting for Sig1 and MCR1\n");
+				   fout<< ("P1 Waiting for Sig1 and MCR1\n");
 			}
 
 				curr_queue_length--;
@@ -158,14 +162,16 @@ void *tread1 (void *unused){
 					if (is_empty()) times_empty++;
 						if (times_empty >= 2 && number_of_full >= 2 ){
 							fout << "P1 CR1 Empty and full two times!\n";
-							cond = false;
+							//cond = false;
+							break;
 						}
 
-				fout << "P1 mutex unlock\n";
+		//		fout << "P1 mutex unlock\n";
 		pthread_mutex_unlock (&MCR1);
 		pthread_cond_signal(&Sig2);
+		fout << "P1 send Sig2\n";
 	}
-		printf ("P1 goes die\n");
+		fout << ("P1 goes die\n");
 		fout << ("Consumer thread_1  stopped and cancel other !!!! \n");
 		pthread_cancel(p4);
 	    return NULL;
@@ -173,11 +179,13 @@ void *tread1 (void *unused){
 
 void *tread2 (void *unused){
 		//int value;
-		while (cond)
+		while (1)
 			{
 				pthread_mutex_lock(&MCR1);
+				fout << "P2 wait Sig21\n";
 				pthread_cond_wait (&Sig21, &MCR1);
-					fout << "P2 mutex lock\n";
+				fout << "P2 get Sig21\n";
+					//fout << "P2 mutex lock\n";
 
 							if (is_full())
 							  {
@@ -192,7 +200,8 @@ void *tread2 (void *unused){
 									if (is_full())   number_of_full++;
 									if (times_empty >= 2 && number_of_full >= 2){
 										fout << "P2 CR1 full and empty two times!" << endl;
-										cond = false;
+										//cond = false;
+										break;
 									}
 
 									fout << "P2 use CR2\n" << CR2.var_int_1
@@ -206,13 +215,15 @@ void *tread2 (void *unused){
 									fout << "P2 modef CR2\n";
 									atomic_operations();
 
-					fout << "P4 mutex unlock\n";
+					//fout << "P4 mutex unlock\n";
 					pthread_mutex_unlock (&MCR1);
+					fout << "P2 Send Sig1\n";
 					pthread_cond_signal(&Sig1);
+					fout << "P2 Send Sig22\n";
 					pthread_cond_signal(&Sig22);
 			}
-			printf ("P2 goes die\n");
-			fout << ("Producer thread_4  stopped and cancel other !!!! \n");
+			fout << ("P2 goes die\n");
+			fout << ("Consumer thread_2  stopped and cancel other !!!! \n");
 			pthread_cancel(p4);
 	return NULL;
 }
@@ -221,39 +232,41 @@ void *tread3 (void *unused){
 	while (1)
 		{
 			pthread_mutex_lock(&MCR1);
-			fout << "P3 mutex lock\n";
+			//fout << "P3 mutex lock\n";
 
 			fout << "P3 modef CR2\n";
 			atomic_operations();
 
-			pthread_cond_signal(&Sig21);
+			pthread_cond_broadcast(&Sig21);
+			fout << "P3 broadcast Sig21\n";
 
 			fout << "P3 modef CR2\n";
 			atomic_operations();
 
-			fout << "P3 mutex unlock\n";
+			//fout << "P3 mutex unlock\n";
 			pthread_mutex_unlock(&MCR1);
+			usleep(10000);
 		}
 	pthread_cancel(p4);
-	printf ("P3 goes die\n");
+	fout << ("P3 goes die\n");
 				fout << ("thread3  stopped and cancel other !!!! \n");
 	return NULL;
 }
 
 void *tread4 (void *unused){
 	int value;
-	while (cond)
+	while (1)
 		{
 			sem_getvalue(&SCR21, &value);
 			cout << "P4 The value of the semaphor is " << value << endl;
 			if (value == 1 ){
 				pthread_mutex_lock(&MCR1);
-				fout << "P4 mutex lock\n";
+				//fout << "P4 mutex lock\n";
 
 						if (is_full())
 						  {
-						  printf ("P4 Waiting for Sig2 and MCR1\n");
-						  pthread_cond_wait (&Sig2, &MCR1);
+							  fout << ("P4 Waiting for Sig2 and MCR1\n");
+							  pthread_cond_wait (&Sig2, &MCR1);
 						  }
 
 								add_elem();
@@ -263,16 +276,17 @@ void *tread4 (void *unused){
 								if (is_full())   number_of_full++;
 								if (times_empty >= 2 && number_of_full >= 2){
 									fout << "P4 CR1 full and empty two times!" << endl;
-									cond = false;
+									break;
 								}
 
-				fout << "P4 mutex unlock\n";
+				//fout << "P4 mutex unlock\n";
 				pthread_mutex_unlock (&MCR1);
 				pthread_cond_signal(&Sig1);
+				fout << "P4 send Sig1\n";
 			}
 		}
 
-		printf ("P4 goes die\n");
+		fout <<  ("P4 goes die\n");
 		fout << ("Producer thread_4  stopped and cancel other !!!! \n");
 		return NULL;
 }
@@ -280,22 +294,25 @@ void *tread4 (void *unused){
 void *tread5 (void *unused){
 int value;
 //int _count = 0;
-	while (cond)
+	while (1)
 		{
 			pthread_mutex_lock(&MCR1);
+			fout << "P5 wait Sig21\n";
 			pthread_cond_wait (&Sig21, &MCR1);
-			fout << "P5 mutex lock\n";
+			fout << "P5 get Sig21\n";
+			//fout << "P5 mutex lock\n";
 
 				sem_getvalue(&SCR21, &value);
 				if (value == 1){
 					if (sem_wait(&SCR21)) { printf("sem_trywait (tread5): failed: %s\n", strerror(errno)); }
+					fout << "P5 close Semaphor\n";
 				}
 				sem_getvalue(&SCR21, &value);
 				cout << "P5 The value of the semaphor is " << value << endl;
 
 				if (is_empty()) {
 					pthread_cond_wait (&Sig1, &MCR1);
-					fout << "P5 Waiting for Sig1 and MCR1";
+					fout << "P5 Waiting for Sig1 and MCR1\n";
 				}
 
 			    	curr_queue_length--;
@@ -305,7 +322,8 @@ int value;
 					if (is_empty())  times_empty++;
 					if (times_empty >= 2 && number_of_full >= 2){
 						fout << "P5 CR1 Full and Empty two times!" << endl;
-						cond = false;
+						//cond = false;
+						break;
 					}
 
 					fout << "P5 use CR2\n" << CR2.var_int_1
@@ -319,12 +337,13 @@ int value;
 									fout << "P5 modef CR2\n";
 						atomic_operations();
 
-			fout << "P5 mutex unlock\n";
+			//fout << "P5 mutex unlock\n";
 			pthread_mutex_unlock (&MCR1);
+			fout << "P5 send Sig2\n";
 			pthread_cond_signal(&Sig2);
 		}
 		pthread_cancel(p4);
-		printf ("P5 goes die\n");
+		fout <<  ("P5 goes die\n");
 		fout << ("Consumer thread_5  stopped and cancel other !!!! \n");
 
 		return NULL;
@@ -334,20 +353,23 @@ void *tread6 (void *unused){
 	while (1)
 		{
 		pthread_mutex_lock(&MCR1);
+		fout << "P6 wait Sig21\n";
 			pthread_cond_wait (&Sig21, &MCR1);
-		fout << "P6 mutex lock\n";
+			fout << "P6 Get Sig21\n";
+		//fout << "P6 mutex lock\n";
 					fout << "P6 modef CR2 after Sig21\n";
 					atomic_operations();
+					fout << "P6 wait Sig22\n";
 			pthread_cond_wait (&Sig22, &MCR1);
+			fout << "P6 get Sig22\n";
 					fout << "P6 modef CR2 after Sig22\n";
 					atomic_operations();
-		fout << "P6 mutex unlock\n";
+		//fout << "P6 mutex unlock\n";
 		pthread_mutex_unlock (&MCR1);
 
 		}
 	pthread_cancel(p4);
-	printf ("P6 goes die\n");
-			fout << ("thread_6  stopped and cancel other !!!! \n");
+	fout <<("P6 goes die\n");
 	return NULL;
 }
 
@@ -376,17 +398,16 @@ int main()
    pthread_create (&p3, NULL, &tread3, NULL);
    pthread_create (&p4, NULL, &tread4, NULL);
    pthread_create (&p5, NULL, &tread5, NULL);
-   pthread_create (&p6, NULL, &tread5, NULL);
+   pthread_create (&p6, NULL, &tread6, NULL);
+
 
    pthread_join (p4, NULL);
-
+   fout << "\nEnd program!" << endl;
    pthread_cancel(p1);
    pthread_cancel(p2);
    pthread_cancel(p3);
    pthread_cancel(p5);
    pthread_cancel(p6);
-
-	fout << "\nEnd program!" << endl;
 
 	fout.close();
 	return 0;
