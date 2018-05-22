@@ -17,10 +17,7 @@ pthread_t p4;
 pthread_t p5;
 pthread_t p6;
 
-//unsigned short k = 10000; // time for sleep
-
 ofstream fout("Tread.log");
-//Queue *MyQueue = new Queue;
 
 
 /* Дві спільні змінні, що контролюють довжину черги, що використовується в якості буфера */
@@ -44,32 +41,35 @@ pthread_mutex_t MCR1 = PTHREAD_MUTEX_INITIALIZER;
 /*
 Atomic variables
 */
-int var_int_1 = 0;
-int var_int_2 = 1;
-unsigned var_unsg_1 = 2;
-unsigned var_unsg_2 = 3;
-long var_long_1 = 4;
-long var_long_2 = 5;
-long unsigned var_long_uns_1 = 6;
-long unsigned var_long_uns_2 = 7;
-
+/* structure presents CR2 */
+struct _CR2{
+	int var_int_1;
+	int var_int_2;
+	unsigned var_unsg_1;
+	unsigned var_unsg_2;
+	long var_long_1;
+	long var_long_2;
+	long unsigned var_long_uns_1;
+	long unsigned var_long_uns_2;
+};
+struct _CR2 CR2;
 /*
 Atomic function which include atomic operations and to do operations with variables
 */
 void atomic_operations(){
 
 	cout <<"Get in to atomic operations" << endl;
-	 __sync_fetch_and_add (&var_int_1, 1);
-	 __sync_add_and_fetch (&var_int_2, 1);
+	 __sync_fetch_and_add (&CR2.var_int_1, 1);
+	 __sync_add_and_fetch (&CR2.var_int_2, 1);
 
-	__sync_fetch_and_or(&var_unsg_1, 2);
-	__sync_fetch_and_and(&var_unsg_2, 3);
+	__sync_fetch_and_or(&CR2.var_unsg_1, 2);
+	__sync_fetch_and_and(&CR2.var_unsg_2, 3);
 
-	__sync_xor_and_fetch (&var_long_1, 4);
-	__sync_nand_and_fetch (&var_long_2, 5);
+	__sync_xor_and_fetch (&CR2.var_long_1, 4);
+	__sync_nand_and_fetch (&CR2.var_long_2, 5);
 
-	__sync_bool_compare_and_swap(&var_long_uns_1, 2, 3);
-	__sync_val_compare_and_swap(&var_long_uns_2, 2, 3);
+	__sync_bool_compare_and_swap(&CR2.var_long_uns_1, 2, 3);
+	__sync_val_compare_and_swap(&CR2.var_long_uns_2, 2, 3);
 }
 
 struct t_elem {
@@ -86,7 +86,7 @@ struct t_elem* end_q=NULL;
 void add_elem()
 {
 /* Створення нового елементу черги */
-        struct t_elem*  p = (struct t_elem*)malloc(sizeof(struct t_elem));
+    struct t_elem*  p = (struct t_elem*)malloc(sizeof(struct t_elem));
 	p->next = NULL;
 
 	if (beg_q == NULL) {
@@ -105,13 +105,13 @@ void* get_elem()
 	void* p=NULL;
 
 /* Перевіряємо чи є елементи в черзі */
-                if (beg_q == NULL)
-                        p = NULL;
-                else {
+             if (beg_q == NULL)
+                 p = NULL;
+             else {
 /* Отримуємо з голови черги її поточний елемент черги для подальшої обробки */
-                        p = beg_q;
+                  p = beg_q;
 /* Видаляємо цей елемент із черги */
-                        beg_q = beg_q->next;
+                  beg_q = beg_q->next;
                 }
 	return p;
 }
@@ -128,13 +128,14 @@ bool is_empty()
 	return curr_queue_length <= 0;
 }
 
-int number_of_full = 0;
+/* counters for finish work */
+unsigned times_empty = 0, number_of_full = 0;
 bool cond = true;
 
 void *tread1 (void *unused){
 	int value;
 
-	int _count = 0;
+	//int _count = 0;
 	while (cond)
 	{
 		pthread_mutex_lock(&MCR1);
@@ -154,9 +155,9 @@ void *tread1 (void *unused){
 				fout << "Consumer thread 1: Pop element = " << beg_q->number <<  " ; current queue length = " << curr_queue_length <<" length\n";
 				get_elem();
 
-					if (is_empty()) _count++;
-						if (_count >= 2){
-							fout << "P1 CR1 Empty two times!\n";
+					if (is_empty()) times_empty++;
+						if (times_empty >= 2 && number_of_full >= 2 ){
+							fout << "P1 CR1 Empty and full two times!\n";
 							cond = false;
 						}
 
@@ -166,7 +167,7 @@ void *tread1 (void *unused){
 	}
 		printf ("P1 goes die\n");
 		fout << ("Consumer thread_1  stopped and cancel other !!!! \n");
-
+		pthread_cancel(p4);
 	    return NULL;
 }
 
@@ -189,19 +190,19 @@ void *tread2 (void *unused){
 									fout <<"Producer thread 2: Push element = " << end_q->number << " Created; current queue length = " << curr_queue_length << endl;
 
 									if (is_full())   number_of_full++;
-									if (number_of_full >= 2){
-										fout << "P2 CR1 full two times!" << endl;
+									if (times_empty >= 2 && number_of_full >= 2){
+										fout << "P2 CR1 full and empty two times!" << endl;
 										cond = false;
 									}
 
-									fout << "P2 use CR2\n" << var_int_1
-												<< " " << var_int_2
-												<< " " << var_unsg_1
-												<< " " << var_unsg_2
-												<< " " << var_long_1
-												<< " " << var_long_2
-												<< " " << var_long_uns_1
-												<< " " << var_long_uns_2 << "\n";
+									fout << "P2 use CR2\n" << CR2.var_int_1
+												<< " " << CR2.var_int_2
+												<< " " << CR2.var_unsg_1
+												<< " " << CR2.var_unsg_2
+												<< " " << CR2.var_long_1
+												<< " " << CR2.var_long_2
+												<< " " << CR2.var_long_uns_1
+												<< " " << CR2.var_long_uns_2 << "\n";
 									fout << "P2 modef CR2\n";
 									atomic_operations();
 
@@ -212,7 +213,7 @@ void *tread2 (void *unused){
 			}
 			printf ("P2 goes die\n");
 			fout << ("Producer thread_4  stopped and cancel other !!!! \n");
-
+			pthread_cancel(p4);
 	return NULL;
 }
 
@@ -233,6 +234,9 @@ void *tread3 (void *unused){
 			fout << "P3 mutex unlock\n";
 			pthread_mutex_unlock(&MCR1);
 		}
+	pthread_cancel(p4);
+	printf ("P3 goes die\n");
+				fout << ("thread3  stopped and cancel other !!!! \n");
 	return NULL;
 }
 
@@ -257,8 +261,8 @@ void *tread4 (void *unused){
 								fout <<"Producer thread 4: Push element = " << end_q->number << " Created; current queue length = " << curr_queue_length << endl;
 
 								if (is_full())   number_of_full++;
-								if (number_of_full >= 2){
-									fout << "P4 CR1 full two times!" << endl;
+								if (times_empty >= 2 && number_of_full >= 2){
+									fout << "P4 CR1 full and empty two times!" << endl;
 									cond = false;
 								}
 
@@ -267,15 +271,15 @@ void *tread4 (void *unused){
 				pthread_cond_signal(&Sig1);
 			}
 		}
+
 		printf ("P4 goes die\n");
 		fout << ("Producer thread_4  stopped and cancel other !!!! \n");
-
 		return NULL;
 }
 
 void *tread5 (void *unused){
 int value;
-int _count = 0;
+//int _count = 0;
 	while (cond)
 		{
 			pthread_mutex_lock(&MCR1);
@@ -298,20 +302,20 @@ int _count = 0;
 					fout << "Consumer thread 5: Pop element = " << beg_q->number <<  " ; current queue length = " << curr_queue_length <<" length\n";
 			    	get_elem();
 
-					if (is_empty())  _count++;
-					if (_count >= 2){
-						fout << "P5 Empty two times!" << endl;
+					if (is_empty())  times_empty++;
+					if (times_empty >= 2 && number_of_full >= 2){
+						fout << "P5 CR1 Full and Empty two times!" << endl;
 						cond = false;
 					}
 
-					fout << "P5 use CR2\n" << var_int_1
-									<< " " << var_int_2
-									<< " " << var_unsg_1
-									<< " " << var_unsg_2
-									<< " " << var_long_1
-								    << " " << var_long_2
-									<< " " << var_long_uns_1
-									<< " " << var_long_uns_2 << "\n";
+					fout << "P5 use CR2\n" << CR2.var_int_1
+									<< " " << CR2.var_int_2
+									<< " " << CR2.var_unsg_1
+									<< " " << CR2.var_unsg_2
+									<< " " << CR2.var_long_1
+								    << " " << CR2.var_long_2
+									<< " " << CR2.var_long_uns_1
+									<< " " << CR2.var_long_uns_2 << "\n";
 									fout << "P5 modef CR2\n";
 						atomic_operations();
 
@@ -319,9 +323,10 @@ int _count = 0;
 			pthread_mutex_unlock (&MCR1);
 			pthread_cond_signal(&Sig2);
 		}
-
+		pthread_cancel(p4);
 		printf ("P5 goes die\n");
 		fout << ("Consumer thread_5  stopped and cancel other !!!! \n");
+
 		return NULL;
 }
 
@@ -338,16 +343,28 @@ void *tread6 (void *unused){
 					atomic_operations();
 		fout << "P6 mutex unlock\n";
 		pthread_mutex_unlock (&MCR1);
-								//pthread_cond_signal(&Sig2);
+
 		}
+	pthread_cancel(p4);
+	printf ("P6 goes die\n");
+			fout << ("thread_6  stopped and cancel other !!!! \n");
 	return NULL;
 }
 
 int main()
 {
+	fout << "Program begin\n";
 	if (sem_init(&SCR21,0,0) == -1) { printf("sem_init: failed: %s\n", strerror(errno)); }
 
-	fout << "Program begin\n";
+	CR2.var_int_1 = 0;
+	CR2.var_int_2 = 1;
+	CR2.var_unsg_1 = 2;
+	CR2.var_unsg_2 = 3;
+	CR2.var_long_1 = 5;
+	CR2.var_long_2 = 7;
+	CR2.var_long_uns_1 = 21;
+	CR2.var_long_uns_2= 2;
+
    for(int i=0; i<2; i++) {
 	   add_elem();
       fout << "Added first element =" << i << endl;
@@ -363,10 +380,10 @@ int main()
 
    pthread_join (p4, NULL);
 
-   pthread_cancel(p5);
    pthread_cancel(p1);
    pthread_cancel(p2);
    pthread_cancel(p3);
+   pthread_cancel(p5);
    pthread_cancel(p6);
 
 	fout << "\nEnd program!" << endl;

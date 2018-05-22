@@ -12,38 +12,1829 @@ P3 mutex lock
 P3 modef CR2
 P3 modef CR2
 P3 mutex unlock
-P3 mutex lock
-P3 modef CR2
-P3 modef CR2
-P3 mutex unlock
-P3 mutex lock
-P3 modef CR2
-P3 modef CR2
-P3 mutex unlock
-P3 mutex lock
-P3 modef CR2
-P3 modef CR2
-P3 mutex unlock
-P3 mutex lock
-P3 modef CR2
-P3 modef CR2
-P3 mutex unlock
-P2 mutex lock
-Producer thread 2: Push element = 0 Created; current queue length = 1
-P2 use CR2
-10 11 2 3 4 -1 6 7
-P2 modef CR2
-P4 mutex unlock
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 CR1 Empty two times!
-P1 mutex unlock
-Consumer thread_1  stopped and cancel other !!!! 
 P4 mutex lock
 Producer thread 4: Push element = 0 Created; current queue length = 1
 P4 mutex unlock
-Producer thread_4  stopped and cancel other !!!! 
+P2 mutex lock
+Producer thread 2: Push element = 1 Created; current queue length = 2
+P2 use CR2
+2 3 2 3 5 -1 21 3
+P2 modef CR2
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 2 Created; current queue length = 3
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 3 Created; current queue length = 4
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 4 Created; current queue length = 5
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 5 Created; current queue length = 6
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 6 Created; current queue length = 7
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 7 Created; current queue length = 8
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 8 Created; current queue length = 9
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 9 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+Consumer thread 1: Pop element = 0 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 10 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 1 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 11 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 2 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 12 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 3 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 13 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 4 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 14 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 5 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 15 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 6 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 16 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 7 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 17 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 8 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 18 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 9 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 19 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 10 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 20 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 11 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 21 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 12 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 22 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 13 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 23 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 14 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 24 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 15 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 25 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 16 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 26 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 17 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 27 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 18 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 28 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 19 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 29 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 20 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 30 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 21 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 31 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 22 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 32 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 23 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 33 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 24 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 34 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 25 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 35 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 26 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 36 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 27 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 37 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 28 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 38 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 29 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 39 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 30 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 40 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 31 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 41 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 32 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 42 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 33 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 43 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 34 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 44 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 35 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 45 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 36 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 46 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 37 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 47 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 38 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 48 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 39 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 49 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 40 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 50 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 41 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 51 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 42 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 52 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 43 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 53 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 44 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 54 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 45 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 55 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 46 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 56 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 47 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 57 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 48 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 58 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 49 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 59 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 50 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 60 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 51 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 61 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 52 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 62 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 53 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 63 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 54 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 64 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 55 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 65 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 56 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 66 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 57 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 67 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 58 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 68 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 59 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 69 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 60 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 70 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 61 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 71 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 62 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 72 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 63 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 73 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 64 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 74 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 65 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 75 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 66 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 76 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 67 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 77 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 68 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 78 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 69 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 79 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 70 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 80 Created; current queue length = 10
+P4 mutex unlock
 P3 mutex lock
 P3 modef CR2
 P3 modef CR2
+P3 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 71 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 81 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 72 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 82 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 73 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 83 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 74 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 84 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 75 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 85 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 76 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 86 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 77 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 87 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 78 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 88 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 79 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 89 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 80 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 90 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 81 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 91 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 82 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 92 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 83 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 93 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 84 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 94 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 85 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 95 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 86 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 96 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 87 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 97 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 88 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 98 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 89 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 99 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 90 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 100 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 91 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 101 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 92 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 102 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 93 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 103 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 94 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 104 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 95 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 105 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 96 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 106 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 97 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 107 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 98 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 108 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 99 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 109 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 100 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 110 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 101 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 111 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 102 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 112 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 103 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 113 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 104 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 114 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 105 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 115 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 106 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 116 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 107 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 117 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 108 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 118 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 109 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 119 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 110 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 120 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 111 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 121 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 112 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 122 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 113 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 123 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 114 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 124 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 115 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 125 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 116 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 126 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 117 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 127 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 118 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 128 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 119 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 129 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 120 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 130 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 121 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 131 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 122 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 132 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 123 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 133 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 124 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 134 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 125 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 135 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 126 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 136 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 127 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 137 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 128 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 138 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 129 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 139 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 130 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 140 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 131 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 141 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 132 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 142 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 133 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 143 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 134 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 144 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 135 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 145 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 136 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 146 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 137 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 147 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 138 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 148 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 139 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 149 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 140 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 150 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 141 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 151 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 142 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 152 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 143 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 153 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 144 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 154 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 145 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 155 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 146 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 156 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 147 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 157 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 148 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 158 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 149 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 159 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 150 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 160 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 151 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 161 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 152 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 162 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 153 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 163 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 154 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 164 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 155 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 165 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 156 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 166 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 157 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 167 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 158 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 168 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 159 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 169 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 160 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 170 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 161 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 171 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 162 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 172 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 163 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 173 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 164 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 174 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 165 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 175 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 166 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 176 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 167 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 177 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 168 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 178 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 169 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 179 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 170 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 180 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 171 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 181 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 172 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 182 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 173 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 183 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 174 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 184 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 175 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 185 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 176 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 186 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 177 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 187 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 178 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 188 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 179 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 189 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 180 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 190 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 181 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 191 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 182 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 192 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 183 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 193 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 184 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 194 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 185 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 195 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 186 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 196 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 187 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 197 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 188 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 198 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 189 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 199 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 190 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 200 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 191 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 201 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 192 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 202 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 193 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 203 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 194 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 204 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 195 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 205 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 196 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 206 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 197 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 207 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 198 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 208 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 199 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 209 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 200 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 210 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 201 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 211 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 202 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 212 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 203 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 213 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 204 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 214 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 205 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 215 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 206 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 216 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 207 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 217 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 208 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 218 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 209 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 219 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 210 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 220 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 211 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 221 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 212 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 222 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 213 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 223 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 214 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 224 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 215 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 225 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 216 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 226 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 217 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 227 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 218 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 228 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 219 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 229 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 220 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 230 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 221 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 231 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 222 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 232 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 223 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 233 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 224 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 234 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 225 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 235 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 226 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 236 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 227 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 237 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 228 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 238 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 229 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 239 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 230 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 240 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 231 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 241 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 232 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 242 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 233 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 243 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 234 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 244 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 235 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 245 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 236 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 246 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 237 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 247 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 238 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 248 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 239 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 249 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 240 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 250 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 241 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 251 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 242 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 252 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 243 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 253 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 244 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 254 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 245 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 255 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 246 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 256 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 247 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 257 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 248 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 258 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 249 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 259 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 250 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 260 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 251 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 261 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 252 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 262 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 253 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 263 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 254 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 264 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 255 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 265 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 256 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 266 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 257 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 267 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 258 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 268 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 259 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 269 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 260 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 270 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 261 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 271 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 262 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 272 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 263 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 273 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 264 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 274 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 265 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 275 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 266 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 276 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 267 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 277 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 268 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 278 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 269 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 279 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 270 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 280 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 271 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 281 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 272 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 282 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 273 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 283 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 274 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 284 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 275 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 285 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 276 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 286 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 277 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 287 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 278 ; current queue length = 9 length
+P1 mutex unlock
+Producer thread 4: Push element = 288 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 279 ; current queue length = 9 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 280 ; current queue length = 8 length
+P1 mutex unlock
+Producer thread 4: Push element = 289 Created; current queue length = 9
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 290 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 281 ; current queue length = 9 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 282 ; current queue length = 8 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 283 ; current queue length = 7 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 284 ; current queue length = 6 length
+P1 mutex unlock
+Producer thread 4: Push element = 291 Created; current queue length = 7
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 292 Created; current queue length = 8
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 293 Created; current queue length = 9
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 294 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 285 ; current queue length = 9 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 286 ; current queue length = 8 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 287 ; current queue length = 7 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 288 ; current queue length = 6 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 289 ; current queue length = 5 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 290 ; current queue length = 4 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 291 ; current queue length = 3 length
+P1 mutex unlock
+Producer thread 4: Push element = 295 Created; current queue length = 4
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 296 Created; current queue length = 5
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 297 Created; current queue length = 6
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 298 Created; current queue length = 7
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 299 Created; current queue length = 8
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 300 Created; current queue length = 9
+P4 mutex unlock
+P4 mutex lock
+Producer thread 4: Push element = 301 Created; current queue length = 10
+P4 mutex unlock
+P4 mutex lock
+P1 mutex lock
+Consumer thread 1: Pop element = 292 ; current queue length = 9 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 293 ; current queue length = 8 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 294 ; current queue length = 7 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 295 ; current queue length = 6 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 296 ; current queue length = 5 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 297 ; current queue length = 4 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 298 ; current queue length = 3 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 299 ; current queue length = 2 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 300 ; current queue length = 1 length
+P1 mutex unlock
+P1 mutex lock
+Consumer thread 1: Pop element = 301 ; current queue length = 0 length
+P1 CR1 Empty and full two times!
+P1 mutex unlock
+Producer thread 4: Push element = 0 Created; current queue length = 1
+P4 CR1 full and empty two times!
+P4 mutex unlock
+Consumer thread_1  stopped and cancel other !!!! 
 
 End program!
