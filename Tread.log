@@ -1,1969 +1,220 @@
 Program begin
 Added first element =0
 Added first element =1
+P2 wait Sig21
 P1 open Semaphor
 Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P2 wait Sig21
-P3 modef CR2
 P1 send Sig2
+P1 open Semaphor
+Consumer thread 1: Pop element = 1 ; current queue length = 0 length
+P1 send Sig2
+P1 open Semaphor
+P5 wait Sig21
+P6 wait Sig21
+P3 modef CR2
 P3 broadcast Sig21
 P3 modef CR2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-P5 wait Sig21
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+Producer thread 4: Push element = 0 Created; current queue length = 1
+P4 send Sig1
+Producer thread 4: Push element = 1 Created; current queue length = 2
+P4 send Sig1
+Producer thread 4: Push element = 2 Created; current queue length = 3
+P4 send Sig1
+P4 Waiting for Sig2 and MCR1
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P5 get Sig21
+Consumer thread 5: Pop element = 0 ; current queue length = 2 length
+P5 use CR2
+70 71 2 3 5 -1 21 3
+P5 modef CR2
+P5 close Semaphor
+P5 send Sig2
+P4 Get Sig2 and MCR1
+Producer thread 4: Push element = 3 Created; current queue length = 3
+P4 send Sig1
+P4 Waiting for Sig2 and MCR1
 P2 get Sig21
-Producer thread 2: Push element = 0 Created; current queue length = 1
-P2 use CR2
-2 3 2 3 5 -1 21 3
-P2 modef CR2
-P2 Send Sig1
-P2 Send Sig22
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P6 wait Sig21
-Producer thread 4: Push element = 2 Created; current queue length = 3
-P4 send Sig1
+P2 Waiting for Sig2 and MCR1
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P6 Get Sig21
+P6 modef CR2 after Sig21
+P6 wait Sig22
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P5 wait Sig21
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
 P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 2 length
-Producer thread 4: Push element = 3 Created; current queue length = p element = 13
-P4 send Sig1
 Consumer thread 1: Pop element = 1 ; current queue length = 2 length
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P3 modef CR2
+P3 broadcast Sig21
+P3 modef CR2
+P5 get Sig21
+Consumer thread 5: Pop element = 2 ; current queue length = 1 length
+P5 use CR2
+98 99 2 3 5 -1 21 3
+P5 modef CR2
+P5 close Semaphor
 P1 send Sig2
-Consumer thread 1: Pop element = 2 ; current queue length = 1 length
-P1 send Sig2
+P5 send Sig2
+P5 wait Sig21
+ P2 Get Sig2 and MCR1
+P2 CR1 full and empty two times!
+P2 Send Sig22
+P2 goes die
+P6 get Sig22
+P6 modef CR2 after Sig22
+P6 goes die
+P1 open Semaphor
 Consumer thread 1: Pop element = 3 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-P2 wait Sig21
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-Producer thread 4: Push element = 2 Created; current queue length = 3
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 2 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 2 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-Producer thread 4: Push element = 2 Created; current queue length = 3
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 2 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 2 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-Producer thread 4: Push element = 2 Created; current queue length = 3
-P4 send Sig1
-Producer thread 4: Push element = 3 Created; current queue length = 4
-P4 send Sig1
-Producer thread 4: Push element = 4 Created; current queue length = 5
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 4 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 3 length
-P1 send Sig2
-Consumer thread 1: Pop element = 2 ; current queue length = 2 length
-P1 send Sig2
-Consumer thread 1: Pop element = 3 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 4 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-Producer thread 4: Push element = 2 Created; current queue length = 3
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 2 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 2 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-Producer thread 4: Push element = 0PCreated; current queue length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-Producer thread 4: Push element = 0P1 send Sig2
- Created; current queue length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-Producer thread 4: Push element = 0 Created; current queue length = 1
-e length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 1 length
-P1 send Sig2
-Consumer thread 1: Pop element = 1 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-P4 send Sig1
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-P1 Waiting for Sig1 and MCR1
-Consumer thread 1: Pop element = 0 ; current queue length = 0 length
-P1 send Sig2
-Producer thread 4: Push element = 0 Created; current queue length = 1
-P4 send Sig1
-Producer thread 4: Push element = 1 Created; current queue length = 2
-P4 send Sig1
-Producer thread 4: Push element = 2 Created; current queue length = 3
-P4 send Sig1
-Producer thread 4: Push element = 3 Created; current queue length = 4
-P4 send Sig1
-Producer thread 4: Push element = 4 Created; current queue length = 5
-P4 CR1 full and empty two times!
+P3 goes die
+P4 Get Sig2 and MCR1
+P4 CR1 full two times!
 P4 goes die
-Producer thread_4  stopped and cancel other !!!! 
+P5 get Sig21
+P1 CR1 Empty and full two times!
+P5 close Semaphor
+P1 send Sig2
+P5 use CR2
+100 101 2 3 5 -1 21 3
+P5 modef CR2
+P1 send Sig2
+P5 goes die
+P1 open Semaphor
+P1 CR1 Empty and full two times!
+P1 send Sig2
+P1 goes die
 
 End program!
