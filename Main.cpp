@@ -151,6 +151,8 @@ void *tread1 (void *unused){
 			{
 				fout << "P1 CR1 Empty and full two times!\n";
 				//if (cond) cond = false;
+				sem_post(&SCR21);
+				fout << "P1 open Semaphor\n";
 				pthread_mutex_unlock (&MCR1);
 				pthread_cond_signal(&Sig2);
 				fout << "P1 send Sig2\n";
@@ -287,8 +289,8 @@ void *tread4 (void *unused){
 				{
 					fout << "P4 CR1 full two times!" << endl;
 					//if (cond) cond = false;
-					//pthread_cond_signal(&Sig1);
-					//fout << "P4 send Sig1\n";
+					pthread_cond_signal(&Sig1);
+					fout << "P4 send Sig1\n";
 					pthread_mutex_unlock (&MCR1);
 					break;
 				}
@@ -334,21 +336,25 @@ int value;
 
 
 						if (is_empty() && (number_of_full < 2))	{
-							   pthread_cond_wait (&Sig1, &MCR1);
-							   fout<< ("P1 Waiting for Sig1 and MCR1\n");
+							  fout<< ("P1 Waiting for Sig1 and MCR1\n");
+							pthread_cond_wait (&Sig1, &MCR1);
+							  fout<< ("P1 Get Sig1 and MCR1\n");
 						}
 						else if (is_empty() && (number_of_full >= 2))
 						{
 							fout << "P1 CR1 Empty and full two times!\n";
 							//if (cond) cond = false;
-							sem_getvalue(&SCR21, &value);
-								if (value >= 1){
-								if (sem_wait(&SCR21)) { printf("sem_wait (tread5): failed: %s\n", strerror(errno)); }
-									fout << "P5 close Semaphor\n";
+						//	if (sem_wait(&SCR21) == 0){
+													//if (sem_wait(&SCR21)) { printf("sem_wait (tread5): failed: %s\n", strerror(errno)); }
+								//sem_wait(&SCR21);
+							sem_wait(&SCR21);
+								cout << "P5 close Semaphor\n";
 									sem_getvalue(&SCR21, &value);
-									printf ("P5 Semaphor is %d \n", value);
-								}
-								fout << "P5 use CR2\n" << CR2.var_int_1
+									cout << "P5 The value of the semaphor is " << value << endl;
+						//	}
+							//else printf ("P5 waititng for opening Semaphore");
+
+							fout << "P5 use CR2\n" << CR2.var_int_1
 															<< " " << CR2.var_int_2
 															<< " " << CR2.var_unsg_1
 															<< " " << CR2.var_unsg_2
@@ -379,13 +385,17 @@ int value;
 									fout << "P5 modef CR2\n";
 						atomic_operations();
 
-						sem_getvalue(&SCR21, &value);
-						if (value >= 1){
-							if (sem_wait(&SCR21)) { printf("sem_wait (tread5): failed: %s\n", strerror(errno)); }
-								fout << "P5 close Semaphor\n";
-						}
+						//sem_getvalue(&SCR21, &value);
+						sem_wait(&SCR21);
+							//if (sem_wait(&SCR21)) { printf("sem_wait (tread5): failed: %s\n", strerror(errno)); }
+						cout << "P5 close Semaphor\n";
+								//sem_wait(&SCR21);
 						sem_getvalue(&SCR21, &value);
 						cout << "P5 The value of the semaphor is " << value << endl;
+						//}
+						//else printf ("P5 waititng for opening Semaphore");
+						//while (sem_wait(&SCR21) != 0) printf ("P5 waititng for opening Semaphore");
+
 
 			pthread_cond_signal(&Sig2);
 			fout << "P5 send Sig2\n";
@@ -404,16 +414,20 @@ void *tread6 (void *unused){
 
 			pthread_mutex_lock(&MCR1);
 			if (cond){
-			fout << "P6 wait Sig21\n";
+
+				if (cond){fout << "P6 wait Sig21\n";
 			pthread_cond_wait (&Sig21, &MCR1);
 			fout << "P6 Get Sig21\n";
 					fout << "P6 modef CR2 after Sig21\n";
 					atomic_operations();
 					fout << "P6 wait Sig22\n";
+				}
+			if (cond){
 			pthread_cond_wait (&Sig22, &MCR1);
 			fout << "P6 get Sig22\n";
 				fout << "P6 modef CR2 after Sig22\n";
 					atomic_operations();
+			}
 			pthread_mutex_unlock (&MCR1);
 			}
 			else {
